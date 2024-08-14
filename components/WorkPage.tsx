@@ -44,7 +44,7 @@ const ImageDisplay = ({
       <img
         src={image}
         alt="Image"
-        className="w-[360px] h-[360px] object-cover m-auto my-auto z-[9999999]"
+        className="w-[360px] sm:w-[720px] h-[360px] sm:h-[720px] object-cover m-auto my-auto z-[9999999]"
       />
     </OverLay>
   );
@@ -161,12 +161,10 @@ const WorkPage = () => {
                 key={index}
                 className="overflow-hidden cursor-pointer"
                 onClick={() => {
-                  if (width > 1000) {
                     setOpenImage({
                       isOpen: true,
                       index: index,
                     });
-                  }
                 }}
               >
                 <img
