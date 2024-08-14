@@ -23,8 +23,8 @@ const KontaktPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
-      <div className="w-screen h-full flex flex-col bg-black bg-opacity-60 items-start justify-start max-sm:py-28 sm:justify-center px-[10px] sm:px-[150px] overflow-y-auto">
-        <h1 className="text-[32px] sm:text-5xl max-sm:text-left font-bold text-white mb-2">
+      <div className="w-screen h-full flex flex-col bg-black bg-opacity-60 items-start justify-start max-sm:pt-[160px] pb-10 sm:justify-center px-[12px] sm:px-[150px] overflow-y-auto">
+        <h1 className="text-[32px] leading-8 sm:text-5xl max-sm:text-left font-bold text-white mb-2">
           Ich freue mich auf deine Anfrage!
         </h1>
         <p className="text-white text-[18px] max-sm:leading-6 sm:text-3xl mb-10 max-sm:text-left">
@@ -44,7 +44,7 @@ const KontaktPage = () => {
         </div>
         <div
           onClick={() => window.open("https://wa.me/06609676961", "_blank")}
-          className="flex flex-row items-center justify-start gap-6 mb-20"
+          className="flex flex-row items-center justify-start gap-6 mb-16"
         >
           <WhatsAppIcon className="text-white text-3xl" />
           <p className="text-[16px] sm:text-[32px] font-bold">0660/9676961</p>

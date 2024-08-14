@@ -154,7 +154,7 @@ const WorkPage = () => {
               left: "50%",
               transform: "translateX(-50%)",
             }}
-            className="w-[120vw] sm:w-[106vw] rounded-lg h-10 absolute -top-6 z-20 border-8 border-[#000000]"
+            className="w-[120vw] sm:w-[106vw] max-sm:hidden rounded-lg h-10 absolute -top-6 z-20 border-8 border-[#000000]"
           ></div>
           <Slider {...settings} className="flex flex-row gap-10">
             {images.map((image, index) => (
@@ -183,7 +183,7 @@ const WorkPage = () => {
               left: "50%",
               transform: "translateX(-50%)",
             }}
-            className="w-[120vw] sm:w-[106vw] h-10 absolute -bottom-2 z-20 border-8 border-[#000000]"
+            className="w-[120vw] sm:w-[106vw] max-sm:hidden h-10 absolute -bottom-2 z-20 border-8 border-[#000000]"
           ></div>
         </div>
         <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-14 px-4 gap-2">
