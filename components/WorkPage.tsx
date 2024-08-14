@@ -191,12 +191,12 @@ const WorkPage = () => {
           onClick={() => {
             window.open("https://www.instagram.com/david_teleki/", "_blank")
           }}
-          className="overflow-hidden max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
+          className="overflow-hidden min-h-[44px] max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
             Mehr auf Instagram
           </button>
           <button
             onClick={() => window.open("https://wa.me/06609676961", "_blank")}
-            className="relative sm:hidden overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
+            className="relative min-h-[44px] sm:hidden overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
           >
             <span className="relative whitespace-nowrap word z-10 group-hover:text-black transition-all text-[18px] sm:text-[24px] duration-700">
               Buche Jetzt
@@ -208,7 +208,7 @@ const WorkPage = () => {
             onClick={() => {
               router.replace("/uber-mich");
             }}
-            className="relative overflow-hidden sm:hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
+            className="relative min-h-[44px] overflow-hidden sm:hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
           >
             Über Mich
           </button>

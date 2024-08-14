@@ -53,7 +53,7 @@ const KontaktPage = () => {
           onClick={() => {
             router.replace("/uber-mich");
           }}
-          className="relative max-sm:hidden overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[190px] sm:w-[290px]"
+          className="relative max-sm:hidden min-h-[44px] overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[190px] sm:w-[290px]"
         >
           <span className="relative whitespace-nowrap word z-10 group-hover:text-black transition-all text-[16px] sm:text-[24px] duration-700">
             Mehr über mich
@@ -64,7 +64,7 @@ const KontaktPage = () => {
             onClick={() => {
               router.replace("/uber-mich");
             }}
-            className="relative sm:hidden overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
+            className="relative sm:hidden min-h-[44px] overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
           >
             Über Mich
           </button>
