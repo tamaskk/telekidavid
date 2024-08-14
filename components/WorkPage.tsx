@@ -88,7 +88,8 @@ const WorkPage = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    swipeToSlide: false,
+    swipeToSlide: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -137,23 +138,23 @@ const WorkPage = () => {
       <div className="w-full h-full flex flex-col bg-black overflow-y-auto overflow-x-hidden bg-opacity-60 items-start justify-center py-20">
         <div
           style={{
-            width: "100%",
             margin: "0 auto",
             marginTop: "100px",
             WebkitBoxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
             MozBoxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
             boxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
           }}
-          className="bg-black mt-10 relative"
+          className="w-[100%] sm:w-[95%] bg-black mt-10 relative"
         >
-          <div
+
+<div
             style={{
               clipPath: "ellipse(45% 100%)", // Increased the width percentage to cover more area
               backgroundColor: "black",
               left: "50%",
               transform: "translateX(-50%)",
             }}
-            className="w-[120vw] h-10 absolute -top-6 z-20 blur-[5px] border-8 border-[#000000]"
+            className="w-[120vw] sm:w-[106vw] rounded-lg h-10 absolute -top-6 z-20 border-8 border-[#000000]"
           ></div>
           <Slider {...settings} className="flex flex-row gap-10">
             {images.map((image, index) => (
@@ -182,7 +183,7 @@ const WorkPage = () => {
               left: "50%",
               transform: "translateX(-50%)",
             }}
-            className="w-[120vw] h-10 absolute -bottom-2 z-20 blur-[5px] border-8 border-[#000000]"
+            className="w-[120vw] sm:w-[106vw] h-10 absolute -bottom-2 z-20 border-8 border-[#000000]"
           ></div>
         </div>
         <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-6 px-4 gap-2">
