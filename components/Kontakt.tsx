@@ -23,7 +23,7 @@ const KontaktPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
-      <div className="w-screen h-full flex flex-col bg-gray-700 bg-opacity-60 items-start justify-start max-sm:py-28 sm:justify-center px-[10px] sm:px-[150px] overflow-y-auto">
+      <div className="w-screen h-full flex flex-col bg-black bg-opacity-60 items-start justify-start max-sm:py-28 sm:justify-center px-[10px] sm:px-[150px] overflow-y-auto">
         <h1 className="text-[32px] sm:text-5xl max-sm:text-left font-bold text-white mb-2">
           Ich freue mich auf deine Anfrage!
         </h1>

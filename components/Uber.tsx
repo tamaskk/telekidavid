@@ -19,7 +19,7 @@ const UberMinch = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
-      <div className="w-screen h-full flex flex-col bg-gray-700 overflow-y-auto bg-opacity-60 items-start justify-start max-sm:py-0 sm:justify-center px-10 sm:px-[150px]">
+      <div className="w-screen h-full flex flex-col bg-black overflow-y-auto bg-opacity-60 items-start justify-start max-sm:py-0 sm:justify-center px-10 sm:px-[150px]">
         <h1 className="text-[32px] pt-10 sm:text-[72px] font-bold mb-5">
           Hallo!
         </h1>

@@ -29,7 +29,7 @@ const Nav = () => {
       <nav
         className={`h-auto max-sm:fixed ${
           isOpened ? "max-sm:translate-y-[86px]" : "max-sm:-translate-y-[200%]"
-        } transition-all duration-300 max-sm:bg-[#161616] max-sm:h-auto max-sm:z-10 max-sm:top-0 max-sm:right-0 px-2 sm:px-[80px] py-[32px] flex flex-col sm:flex-row items-center bg-transparent justify-center sm:justify-between w-screen fixed top-0 left-0 z-10 ${
+        } transition-all duration-300 max-sm:bg-[#161616] max-sm:h-auto max-sm:z-40 max-sm:top-0 max-sm:right-0 px-2 sm:px-[80px] py-[32px] flex flex-col sm:flex-row items-center bg-transparent justify-center sm:justify-between w-screen fixed top-0 left-0 z-10 ${
           Crimson.className
         }`}
       >

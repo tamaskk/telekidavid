@@ -23,7 +23,7 @@ const HomePage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
-      <div className="w-screen h-full flex flex-col bg-gray-700 bg-opacity-60 items-center justify-start sm:justify-center max-sm:py-52">
+      <div className="w-screen h-full flex flex-col bg-black bg-opacity-60 items-center justify-start sm:justify-center max-sm:py-52">
         <h1 className="text-[32px] max-sm:leading-8 px-2 max-sm:text-center sm:text-6xl font-bold max-w-[500px] text-center uppercase leading-normal">
           Ich mache Tattoos aus Leidenschaft
         </h1>

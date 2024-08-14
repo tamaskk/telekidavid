@@ -44,7 +44,7 @@ const ImageDisplay = ({
       <img
         src={image}
         alt="Image"
-        className="w-[90%] h-auto object-cover m-auto my-auto z-[9999999]"
+        className="w-[360px] h-[360px] object-cover m-auto my-auto z-[9999999]"
       />
     </OverLay>
   );
@@ -134,25 +134,34 @@ const WorkPage = () => {
           }
         />
       )}
-      <div className="w-full h-full flex flex-col bg-gray-700 overflow-y-auto bg-opacity-60 items-start justify-start sm:justify-center py-20">
+      <div className="w-full h-full flex flex-col bg-black overflow-y-auto overflow-x-hidden bg-opacity-60 items-start justify-center py-20">
         <div
           style={{
             width: "100%",
             margin: "0 auto",
             marginTop: "100px",
-            "WebkitBoxShadow": "0px 0px 20px 20px rgba(0,0,0,0.75)",
-            "MozBoxShadow": "0px 0px 20px 20px rgba(0,0,0,0.75)",
-            "boxShadow": "0px 0px 20px 20px rgba(0,0,0,0.75)",
+            WebkitBoxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
+            MozBoxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
+            boxShadow: "0px 0px 20px 20px rgba(0,0,0,0.75)",
           }}
-          className="bg-black py-10 mt-10 shadowForBox"
+          className="bg-black mt-10 relative"
         >
+          <div
+            style={{
+              clipPath: "ellipse(45% 100%)", // Increased the width percentage to cover more area
+              backgroundColor: "black",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+            className="w-[120vw] h-10 absolute -top-6 z-20 blur-[5px] border-8 border-[#000000]"
+          ></div>
           <Slider {...settings} className="flex flex-row gap-10">
             {images.map((image, index) => (
               <div
                 key={index}
                 className="overflow-hidden cursor-pointer"
                 onClick={() => {
-                  if (width < 1000) {
+                  if (width > 1000) {
                     setOpenImage({
                       isOpen: true,
                       index: index,
@@ -168,6 +177,15 @@ const WorkPage = () => {
               </div>
             ))}
           </Slider>
+          <div
+            style={{
+              clipPath: "ellipse(45% 100%)", // Increased the width percentage to cover more area
+              backgroundColor: "black",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+            className="w-[120vw] h-10 absolute -bottom-2 z-20 blur-[5px] border-8 border-[#000000]"
+          ></div>
         </div>
         <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-6 px-4 gap-2">
           <button className="overflow-hidden max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
