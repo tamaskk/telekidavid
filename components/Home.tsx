@@ -1,6 +1,6 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
-import bgHome from "../assets/fooldalhatter.png";
+import bgHome from "../assets/33c21a80b1b60a09fc620c4547cdf928.png";
 import { useRouter } from "next/router";
 
 const Crimson = Crimson_Text({

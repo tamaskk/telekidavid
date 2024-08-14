@@ -88,7 +88,7 @@ const WorkPage = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    swipeToSlide: true,
+    swipeToSlide: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -161,10 +161,10 @@ const WorkPage = () => {
                 key={index}
                 className="overflow-hidden cursor-pointer"
                 onClick={() => {
-                    setOpenImage({
-                      isOpen: true,
-                      index: index,
-                    });
+                  setOpenImage({
+                    isOpen: true,
+                    index: index,
+                  });
                 }}
               >
                 <img
