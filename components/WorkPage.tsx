@@ -186,8 +186,12 @@ const WorkPage = () => {
             className="w-[120vw] sm:w-[106vw] h-10 absolute -bottom-2 z-20 border-8 border-[#000000]"
           ></div>
         </div>
-        <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-6 px-4 gap-2">
-          <button className="overflow-hidden max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
+        <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-14 px-4 gap-2">
+          <button 
+          onClick={() => {
+            window.open("https://www.instagram.com/david_teleki/", "_blank")
+          }}
+          className="overflow-hidden max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
             Mehr auf Instagram
           </button>
           <button
