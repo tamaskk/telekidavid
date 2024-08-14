@@ -20,7 +20,7 @@ const UberMinch = () => {
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
       <div className="w-screen h-full flex flex-col bg-black overflow-y-auto bg-opacity-60 items-start justify-center max-sm:py-0 sm:justify-center px-10 sm:px-[150px]">
-        <h1 className="text-[32px] mt-20 sm:text-[72px] font-bold mb-5 max-sm:-mt-32">
+        <h1 className="text-[32px] mt-44 sm:text-[72px] font-bold mb-5 max-sm:-mt-32">
           Hallo!
         </h1>
         <p className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal">
