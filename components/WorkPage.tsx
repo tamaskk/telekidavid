@@ -101,7 +101,7 @@ const WorkPage = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1.3,
+          slidesToShow: 1.6,
           slidesToScroll: 1,
         },
       },
@@ -146,8 +146,7 @@ const WorkPage = () => {
           }}
           className="w-[100%] sm:w-[95%] bg-black mt-10 relative"
         >
-
-<div
+          <div
             style={{
               clipPath: "ellipse(45% 100%)", // Increased the width percentage to cover more area
               backgroundColor: "black",
@@ -156,26 +155,28 @@ const WorkPage = () => {
             }}
             className="w-[120vw] sm:w-[106vw] max-sm:hidden rounded-lg h-10 absolute -top-6 z-20 border-8 border-[#000000]"
           ></div>
-          <Slider {...settings} className="flex flex-row gap-10">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className="overflow-hidden cursor-pointer"
-                onClick={() => {
-                  setOpenImage({
-                    isOpen: true,
-                    index: index,
-                  });
-                }}
-              >
-                <img
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  className="hover:scale-110 w-full transition-all duration-300 object-cover mx-2 my-2"
-                />
-              </div>
-            ))}
-          </Slider>
+<Slider {...settings} className="flex flex-row">
+  {images.map((image, index) => (
+    <div
+      key={index}
+      className="overflow-hidden cursor-pointer max-sm:w-[250px] h-[250px] max-w-[250px]"
+      onClick={() => {
+        setOpenImage({
+          isOpen: true,
+          index: index,
+        });
+      }}
+    >
+      <img
+        src={image}
+        alt={`Image ${index + 1}`}
+        className="hover:scale-110 w-full h-full transition-all duration-300 object-cover"
+      />
+    </div>
+  ))}
+</Slider>
+
+
           <div
             style={{
               clipPath: "ellipse(45% 100%)", // Increased the width percentage to cover more area
@@ -187,11 +188,12 @@ const WorkPage = () => {
           ></div>
         </div>
         <div className="w-screen h-auto flex flex-row items-center justify-center sm:justify-end mt-10 sm:mt-14 px-4 gap-2">
-          <button 
-          onClick={() => {
-            window.open("https://www.instagram.com/david_teleki/", "_blank")
-          }}
-          className="overflow-hidden min-h-[44px] max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000">
+          <button
+            onClick={() => {
+              window.open("https://www.instagram.com/david_teleki/", "_blank");
+            }}
+            className="overflow-hidden min-h-[44px] max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000"
+          >
             Mehr auf Instagram
           </button>
           <button

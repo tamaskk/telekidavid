@@ -40,14 +40,14 @@ const KontaktPage = () => {
           className="flex flex-row items-center justify-start gap-6 max-sm:mb-2"
         >
           <InstagramIcon className="text-white text-3xl" />
-          <p className="text-[16px] sm:text-[32px] font-bold">@david_teleki</p>
+          <p className="text-[16px] sm:text-[32px] font-bold text-white">@david_teleki</p>
         </div>
         <div
           onClick={() => window.open("https://wa.me/06609676961", "_blank")}
           className="flex flex-row items-center justify-start gap-6 mb-16"
         >
           <WhatsAppIcon className="text-white text-3xl" />
-          <p className="text-[16px] sm:text-[32px] font-bold">0660/9676961</p>
+          <p className="text-[16px] sm:text-[32px] font-bold text-white">0660/9676961</p>
         </div>
         <button
           onClick={() => {

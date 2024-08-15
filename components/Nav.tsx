@@ -24,7 +24,7 @@ const Nav = () => {
           height={56}
           className="z-20 sm:hidden"
         />
-        <MenuIcon className="text-2xl" onClick={() => setIsOpened(!isOpened)} />
+        <MenuIcon className="text-2xl text-white" onClick={() => setIsOpened(!isOpened)} />
       </div>
       <nav
         className={`h-auto max-sm:fixed ${
