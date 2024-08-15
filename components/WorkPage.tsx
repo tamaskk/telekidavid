@@ -101,7 +101,7 @@ const WorkPage = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1.6,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
         },
       },
