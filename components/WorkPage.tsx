@@ -159,7 +159,7 @@ const WorkPage = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="overflow-hidden cursor-pointer max-sm:w-[250px] h-[250px] max-w-[250px]"
+                className="overflow-hidden cursor-pointer max-sm:w-[250px] max-sm:h-[250px] max-sm:max-w-[250px]"
                 onClick={() => {
                   setOpenImage({
                     isOpen: true,
@@ -170,7 +170,7 @@ const WorkPage = () => {
                 <img
                   src={image}
                   alt={`Image ${index + 1}`}
-                  className="hover:scale-110 w-full h-full transition-all duration-300 object-cover"
+                  className="hover:scale-110 w-full h-full transition-all duration-300 object-cover sm:my-4 sm:mx-4"
                 />
               </div>
             ))}
