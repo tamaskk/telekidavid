@@ -43,7 +43,7 @@ const KontaktPage = () => {
           <p className="text-[16px] sm:text-[32px] font-bold text-white">@david_teleki</p>
         </div>
         <div
-          onClick={() => window.open("https://wa.me/06609676961", "_blank")}
+          onClick={() => window.open("https://wa.me/36609676961", "_blank")}
           className="flex flex-row items-center justify-start gap-6 mb-16"
         >
           <WhatsAppIcon className="text-white text-3xl" />

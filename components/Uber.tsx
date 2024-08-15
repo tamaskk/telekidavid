@@ -45,7 +45,7 @@ const UberMinch = () => {
           kontaktieren.
         </p>
         <button
-          onClick={() => window.open("https://wa.me/06609676961", "_blank")}
+          onClick={() => window.open("https://wa.me/36609676961", "_blank")}
           className="relative overflow-hidden min-h-[44px] hover:bg-white delay-100 max-sm:self-end bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-6 flex items-center gap-4 py-3 max-h-[68px] justify-center group transition-all duration-1000 mt-14 sm:mt-14"
         >
           <span className="relative whitespace-nowrap word z-10 group-hover:text-black text-white transition-all text-[18px] sm:text-[24px] duration-700">
