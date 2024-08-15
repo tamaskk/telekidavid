@@ -27,7 +27,7 @@ const HomePage = () => {
         <h1 className="text-[32px] text-white max-sm:leading-8 px-2 max-sm:text-center sm:text-6xl font-bold max-w-[500px] text-center uppercase leading-normal">
           Ich mache Tattoos aus Leidenschaft
         </h1>
-        <p className="text-lg text-white sm:text-2xl mb-2 max-sm:text-center max-sm:max-w-[200px]">
+        <p className="text-[20px] leading-[18px] text-white sm:text-2xl mb-2 max-sm:text-center max-sm:max-w-[200px]">
           Hier kannst du mich besser kennenlernen
         </p>
         <button
