@@ -27,7 +27,7 @@ const HomePage = () => {
         <h1 className="text-[32px] text-white max-sm:leading-8 px-2 max-sm:text-center sm:text-6xl font-bold max-w-[500px] text-center uppercase leading-normal">
           Ich mache Tattoos aus Leidenschaft
         </h1>
-        <p className="text-[20px] leading-[18px] text-white sm:text-2xl mb-2 max-sm:text-center max-sm:max-w-[200px]">
+        <p className="text-[20px] leading-[18px] text-white sm:text-2xl max-sm:text-center max-sm:max-w-[240px]">
           Hier kannst du mich besser kennenlernen
         </p>
         <button
@@ -40,11 +40,12 @@ const HomePage = () => {
           <WhatsAppIcon className="group-hover:text-black transition-all duration-700 relative z-10" />
           <div className="absolute bottom-0 bg-white rounded-full transform scale-0 transition-all duration-700 ease-in-out w-full h-0 group-hover:h-full group-hover:w-full group-hover:scale-100 group-hover:origin-bottom"></div>
         </button>
-        <button 
-        onClick={() => {
-          router.replace("/work");
-        }}
-        className="relative min-h-[44px] sm:hidden overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]">
+        <button
+          onClick={() => {
+            router.replace("/work");
+          }}
+          className="relative min-h-[44px] sm:hidden overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
+        >
           <p>Work</p>
         </button>
       </div>
