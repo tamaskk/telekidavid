@@ -13,7 +13,7 @@ import image5 from "../assets/c6208a9d00dbffe2f93296320d05b4d6.jpeg";
 import image6 from "../assets/cc8e8cfb56e26378fe848b9005fc1ecb.jpeg";
 import image7 from "../assets/d366d4799ac37cd64885a16f07d34070.jpeg";
 import image8 from "../assets/e8a272dfd252e840fcf01a6b2592cafc.jpeg";
-import uberhome from "../assets/tattoooldalhatter.jpeg";
+import uberhome from "../assets/tattoooldalhatter.webp";
 
 const OverLay = ({
   children,
@@ -155,27 +155,26 @@ const WorkPage = () => {
             }}
             className="w-[120vw] sm:w-[106vw] max-sm:hidden rounded-lg h-10 absolute -top-6 z-20 border-8 border-[#000000]"
           ></div>
-<Slider {...settings} className="flex flex-row">
-  {images.map((image, index) => (
-    <div
-      key={index}
-      className="overflow-hidden cursor-pointer max-sm:w-[250px] h-[250px] max-w-[250px]"
-      onClick={() => {
-        setOpenImage({
-          isOpen: true,
-          index: index,
-        });
-      }}
-    >
-      <img
-        src={image}
-        alt={`Image ${index + 1}`}
-        className="hover:scale-110 w-full h-full transition-all duration-300 object-cover"
-      />
-    </div>
-  ))}
-</Slider>
-
+          <Slider {...settings} className="flex flex-row">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="overflow-hidden cursor-pointer max-sm:w-[250px] h-[250px] max-w-[250px]"
+                onClick={() => {
+                  setOpenImage({
+                    isOpen: true,
+                    index: index,
+                  });
+                }}
+              >
+                <img
+                  src={image}
+                  alt={`Image ${index + 1}`}
+                  className="hover:scale-110 w-full h-full transition-all duration-300 object-cover"
+                />
+              </div>
+            ))}
+          </Slider>
 
           <div
             style={{

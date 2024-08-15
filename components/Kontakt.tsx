@@ -2,7 +2,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
 import { useRouter } from "next/router";
-import uberhome from "../assets/kontaktoldalhatter.jpeg";
+import uberhome from "../assets/tattoooldalhatter.webp";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni

@@ -1,6 +1,6 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
-import uberhome from "../assets/33c21a80b1b60a09fc620c4547cdf928.png";
+import uberhome from "../assets/33c21a80b1b60a09fc620c4547cdf928.webp";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni
