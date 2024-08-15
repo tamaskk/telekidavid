@@ -31,7 +31,7 @@ const HomePage = () => {
           Hier kannst du mich besser kennenlernen
         </p>
         <button
-          onClick={() => window.open("https://wa.me/36609676961", "_blank")}
+          onClick={() => window.open("https://wa.me/436609676961", "_blank")}
           className="relative min-h-[44px] overflow-hidden hover:bg-white delay-100 mb-5 mt-16 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
         >
           <span className="relative whitespace-nowrap word z-10 group-hover:text-black transition-all text-[18px] sm:text-[24px] duration-700">
