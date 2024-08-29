@@ -1,10 +1,12 @@
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
-import { useRouter } from "next/router";
-import uberhome from "../assets/tattoooldalhatter.webp";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import uberhome from "../assets/tattoooldalhatter.webp";
+import Cookie from "./Cookie";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni
@@ -13,6 +15,12 @@ const Crimson = Crimson_Text({
 
 const KontaktPage = () => {
   const { t } = useTranslation();
+  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const accepted = localStorage.getItem("cookieAccepted");
+    setIsAccepted(accepted === "true"); // Convert to boolean
+  }, []);
   const router = useRouter();
   const bgStyleForHome = {
     backgroundImage: `url(${uberhome.src})`,
@@ -26,17 +34,17 @@ const KontaktPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
-            <Head>
+      {(isAccepted === false || isAccepted === null) && (
+        <Cookie setIsAccepted={setIsAccepted} />
+      )}
+      <Head>
         <title>David Teleki Tattoo</title>
         <meta
           name="description"
           content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta 
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
           content="David Teleki Tattoo, Tattoo, Tätowierung, Tätowierer, Wien, Österreich, Tattoos, Tattoo Studio"
@@ -47,7 +55,7 @@ const KontaktPage = () => {
           {t("contact_title")}
         </h1>
         <p className="text-white text-[18px] max-sm:leading-6 sm:text-3xl mb-10 max-sm:text-left">
-          {t("contact_subtitle_1")} 
+          {t("contact_subtitle_1")}
           <br />
           {t("contact_subtitle_2")}
         </p>
@@ -58,14 +66,18 @@ const KontaktPage = () => {
           className="flex flex-row items-center justify-start gap-6 max-sm:mb-2"
         >
           <InstagramIcon className="text-white text-3xl" />
-          <p className="text-[16px] sm:text-[32px] font-bold text-white">@david_teleki</p>
+          <p className="text-[16px] sm:text-[32px] font-bold text-white">
+            @david_teleki
+          </p>
         </div>
         <div
           onClick={() => window.open("https://wa.me/436609676961", "_blank")}
           className="flex flex-row items-center justify-start gap-6 mb-16"
         >
           <WhatsAppIcon className="text-white text-3xl" />
-          <p className="text-[16px] sm:text-[32px] font-bold text-white">0660/9676961</p>
+          <p className="text-[16px] sm:text-[32px] font-bold text-white">
+            0660/9676961
+          </p>
         </div>
         <button
           onClick={() => {
@@ -79,13 +91,13 @@ const KontaktPage = () => {
           <div className="absolute bottom-0 bg-white rounded-full transform scale-0 transition-all duration-700 ease-in-out w-full h-0 group-hover:h-full group-hover:w-full group-hover:scale-100 group-hover:origin-bottom"></div>
         </button>
         <button
-            onClick={() => {
-              router.replace("/uber-mich");
-            }}
-            className="relative sm:hidden min-h-[44px] overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
-          >
-            Über Mich
-          </button>
+          onClick={() => {
+            router.replace("/uber-mich");
+          }}
+          className="relative sm:hidden min-h-[44px] overflow-hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
+        >
+          Über Mich
+        </button>
       </div>
     </div>
   );

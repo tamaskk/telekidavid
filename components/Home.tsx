@@ -1,9 +1,11 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
-import { useRouter } from "next/router";
-import bgHome from "../assets/33c21a80b1b60a09fc620c4547cdf928.webp";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import bgHome from "../assets/33c21a80b1b60a09fc620c4547cdf928.webp";
+import Cookie from "./Cookie";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"],
@@ -11,6 +13,13 @@ const Crimson = Crimson_Text({
 });
 
 const HomePage = () => {
+  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const accepted = localStorage.getItem("cookieAccepted");
+    setIsAccepted(accepted === "true"); // Convert to boolean
+  }, []);
+
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -26,9 +35,15 @@ const HomePage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
+      {(isAccepted === false || isAccepted === null) && (
+        <Cookie setIsAccepted={setIsAccepted} />
+      )}
       <Head>
         <title>David Teleki Tattoo</title>
-        <meta name="description" content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft" />
+        <meta
+          name="description"
+          content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -60,7 +75,10 @@ const HomePage = () => {
           <p>{t("main_page_header_work")}</p>
         </button>
         <div className="fixed bottom-10 left-[80px] w-[calc(100vw - 160px)] right-[80px] flex flex-row items-center justify-between">
-          <a href="https://howisyourbrand.com" className="text-white text-opacity-50">
+          <a
+            href="https://howisyourbrand.com"
+            className="text-white text-opacity-50"
+          >
             Designed by HowIsYourBrand
           </a>
           <div className="flex flex-row items-center justify-center gap-3 text-white text-opacity-50">

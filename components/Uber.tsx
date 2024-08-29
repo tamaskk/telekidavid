@@ -1,8 +1,10 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
-import uberhome from "../assets/33c21a80b1b60a09fc620c4547cdf928.webp";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import uberhome from "../assets/33c21a80b1b60a09fc620c4547cdf928.webp";
+import Cookie from "./Cookie";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni
@@ -10,6 +12,12 @@ const Crimson = Crimson_Text({
 });
 
 const UberMinch = () => {
+  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const accepted = localStorage.getItem("cookieAccepted");
+    setIsAccepted(accepted === "true"); // Convert to boolean
+  }, []);
   const bgStyleForHome = {
     backgroundImage: `url(${uberhome.src})`,
     backgroundSize: "cover",
@@ -24,17 +32,17 @@ const UberMinch = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
-            <Head>
+      {(isAccepted === false || isAccepted === null) && (
+        <Cookie setIsAccepted={setIsAccepted} />
+      )}
+      <Head>
         <title>David Teleki Tattoo</title>
         <meta
           name="description"
           content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta 
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
           content="David Teleki Tattoo, Tattoo, Tätowierung, Tätowierer, Wien, Österreich, Tattoos, Tattoo Studio"

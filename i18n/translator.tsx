@@ -29,6 +29,10 @@ const all_translate_en = {
     about_text_5: "That's why I take exactly the time for you that you need, because it's your tattoo project and should make you absolutely satisfied.",
     about_text_6: "For more information you can contact me via WhatsApp or Instagram.",
     about_button: "Book Now",
+
+    cookie_text: "This website uses cookies to improve the user experience. By using the website you accept the use of cookies. 🍪",
+    cookie_accept: "Accept",
+    cookie_decline: "Decline",
   };
   
   const all_translate_hu = {
@@ -61,6 +65,10 @@ const all_translate_en = {
     about_text_5: "Ezért pontosan annyi időt szánok rád, amennyire szükséged van, mert ez a te tetoválásod, és teljesen elégedettnek kell lenned vele.",
     about_text_6: "További információkért keress engem WhatsApp-on vagy Instagramon.",
     about_button: "Foglalj most",
+
+    cookie_text: "Az oldal sütiket használ a felhasználói élmény javítása érdekében. Az oldal használatával elfogadod a sütik használatát. 🍪",
+    cookie_accept: "Elfogadom",
+    cookie_decline: "Nem fogadom el",
   };
   
   const all_translate_de = {
@@ -93,6 +101,10 @@ const all_translate_en = {
     about_text_5: "Deswegen nehme ich mir genau die Zeit für dich, die du brauchst, denn es ist dein Tattooprojekt und sollte dich absolut zufriedenstellen.",
     about_text_6: "Für nähere Infos kannst du mich über WhatsApp oder Instagram kontaktieren.",
     about_button: "Buche Jetzt",
+
+    cookie_text: "Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Durch die Nutzung der Website akzeptieren Sie die Verwendung von Cookies. 🍪",
+    cookie_accept: "Akzeptieren",
+    cookie_decline: "Ablehnen",
   };
   
   export { all_translate_de, all_translate_en, all_translate_hu };
