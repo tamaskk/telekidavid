@@ -11,7 +11,7 @@ const Cookie = ({
 
   return (
     <div className="fixed bottom-0 left-0 z-[999999] bg-black p-4 flex flex-col max-sm:gap-4 max-sm:text-center sm:flex-row justify-center items-center">
-      <p>{t("cookie_text")}</p>
+      <p className="text-white">{t("cookie_text")}</p>
       <div className="flex flex-row">
       <button
         onClick={() => {
