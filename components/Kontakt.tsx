@@ -3,6 +3,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
 import { useRouter } from "next/router";
 import uberhome from "../assets/tattoooldalhatter.webp";
+import Head from "next/head";
+import { useTranslation } from "react-i18next";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni
@@ -10,6 +12,7 @@ const Crimson = Crimson_Text({
 });
 
 const KontaktPage = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const bgStyleForHome = {
     backgroundImage: `url(${uberhome.src})`,
@@ -23,15 +26,30 @@ const KontaktPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
+            <Head>
+        <title>David Teleki Tattoo</title>
+        <meta
+          name="description"
+          content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta 
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
+        <meta
+          name="keywords"
+          content="David Teleki Tattoo, Tattoo, Tätowierung, Tätowierer, Wien, Österreich, Tattoos, Tattoo Studio"
+        />
+      </Head>
       <div className="w-screen h-full flex flex-col bg-black bg-opacity-60 items-start justify-start sm:pt-32 max-sm:pt-[160px] pb-10 sm:justify-center px-[12px] sm:px-[150px] overflow-y-auto">
         <h1 className="text-[32px] leading-8 sm:text-5xl max-sm:text-left font-bold text-white mb-2">
-          Ich freue mich auf deine Anfrage!
+          {t("contact_title")}
         </h1>
         <p className="text-white text-[18px] max-sm:leading-6 sm:text-3xl mb-10 max-sm:text-left">
-          Du kannst mich per WhatsApp oder Instagram kontaktieren. 
+          {t("contact_subtitle_1")} 
           <br />
-          Meine
-          Kontaktdaten findest du unten.
+          {t("contact_subtitle_2")}
         </p>
         <div
           onClick={() =>
@@ -56,7 +74,7 @@ const KontaktPage = () => {
           className="relative max-sm:hidden min-h-[44px] overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[190px] sm:w-[290px]"
         >
           <span className="relative whitespace-nowrap word z-10 group-hover:text-black transition-all text-[16px] sm:text-[24px] duration-700">
-            Mehr über mich
+            {t("contact_button")}
           </span>
           <div className="absolute bottom-0 bg-white rounded-full transform scale-0 transition-all duration-700 ease-in-out w-full h-0 group-hover:h-full group-hover:w-full group-hover:scale-100 group-hover:origin-bottom"></div>
         </button>

@@ -1,5 +1,6 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Crimson_Text } from "next/font/google";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
@@ -14,6 +15,7 @@ import image6 from "../assets/cc8e8cfb56e26378fe848b9005fc1ecb.jpeg";
 import image7 from "../assets/d366d4799ac37cd64885a16f07d34070.jpeg";
 import image8 from "../assets/e8a272dfd252e840fcf01a6b2592cafc.jpeg";
 import uberhome from "../assets/tattoooldalhatter.webp";
+import { useTranslation } from "react-i18next";
 
 const OverLay = ({
   children,
@@ -56,6 +58,7 @@ const Crimson = Crimson_Text({
 });
 
 const WorkPage = () => {
+  const { t } = useTranslation();
   const [openImage, setOpenImage] = useState({
     isOpen: false,
     index: 0,
@@ -124,6 +127,19 @@ const WorkPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
+      <Head>
+        <title>David Teleki Tattoo</title>
+        <meta
+          name="description"
+          content="David Teleki Tattoo - Ich mache Tattoos aus Leidenschaft"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="David Teleki Tattoo, Tattoo, Tätowierung, Tätowierer, Wien, Österreich, Tattoos, Tattoo Studio"
+        />
+      </Head>
       {openImage.isOpen && (
         <ImageDisplay
           image={images[openImage.index]}
@@ -193,14 +209,14 @@ const WorkPage = () => {
             }}
             className="overflow-hidden min-h-[44px] max-sm:hidden bg-transparent delay-100 border-2 border-white text-white text-[18px] sm:text-[24px] font-normal rounded-full px-6 flex items-center gap-4 py-2 max-h-[68px] justify-center group transition-all duration-1000"
           >
-            Mehr auf Instagram
+            {t("work_button")}
           </button>
           <button
             onClick={() => window.open("https://wa.me/436609676961", "_blank")}
             className="relative min-h-[44px] sm:hidden overflow-hidden hover:bg-white delay-100 bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
           >
             <span className="relative whitespace-nowrap word z-10 group-hover:text-black transition-all text-[18px] sm:text-[24px] duration-700">
-              Buche Jetzt
+              {t("work_button_mobile_1")}
             </span>
             <WhatsAppIcon className="group-hover:text-black transition-all duration-700 relative z-10" />
             <div className="absolute bottom-0 bg-white rounded-full transform scale-0 transition-all duration-700 ease-in-out w-full h-0 group-hover:h-full group-hover:w-full group-hover:scale-100 group-hover:origin-bottom"></div>
@@ -211,7 +227,7 @@ const WorkPage = () => {
             }}
             className="relative min-h-[44px] overflow-hidden sm:hidden bg-white delay-100 bg-transparent border-2 border-white text-black text-[18px] sm:text-[32px] font-bold rounded-full px-4 flex items-center gap-4 py-2 sm:py-4 max-h-[68px] justify-center group transition-all duration-1000 w-[196px]"
           >
-            Über Mich
+            {t("work_button_mobile_2")}
           </button>
         </div>
       </div>

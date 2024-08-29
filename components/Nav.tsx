@@ -1,9 +1,12 @@
+import i18n from "@/i18n/config";
 import MenuIcon from "@mui/icons-material/Menu";
+import moment from "moment";
 import { Crimson_Text } from "next/font/google";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import logo from "../assets/davidtelekilogo.png";
+import { useTranslation } from "react-i18next";
 
 const Crimson = Crimson_Text({
   weight: ["400", "600", "700"], // vagy ['400', '600', '700'] ha több súlyt szeretnél használni
@@ -12,7 +15,14 @@ const Crimson = Crimson_Text({
 
 const Nav = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   const [isOpened, setIsOpened] = useState(false);
+
+  const changeLanguage = (lng: any) => {
+    i18n.changeLanguage(lng === "hu-HU" ? "hu" : "en");
+    moment.locale(lng === "hu-HU" ? "hu" : "en");
+    localStorage.setItem("i18nextLng", lng);
+  };
 
   return (
     <>
@@ -24,7 +34,10 @@ const Nav = () => {
           height={56}
           className="z-20 sm:hidden"
         />
-        <MenuIcon className="text-2xl text-white" onClick={() => setIsOpened(!isOpened)} />
+        <MenuIcon
+          className="text-2xl text-white"
+          onClick={() => setIsOpened(!isOpened)}
+        />
       </div>
       <nav
         className={`h-auto max-sm:fixed ${
@@ -33,7 +46,13 @@ const Nav = () => {
           Crimson.className
         }`}
       >
-        <Image src={logo} alt="logo" className="max-sm:hidden" width={150} height={150} />
+        <Image
+          src={logo}
+          alt="logo"
+          className="max-sm:hidden"
+          width={150}
+          height={150}
+        />
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start max-sm:w-full sm:justify-center gap-6 sm:gap-20 bg-transparent">
           <button
             onClick={() => {
@@ -44,7 +63,7 @@ const Nav = () => {
               router.pathname === "/" && "bg-white !text-black"
             }`}
           >
-            Home
+            {t("nav_home")}
           </button>
           <button
             onClick={() => {
@@ -55,7 +74,7 @@ const Nav = () => {
               router.pathname === "/work" && "bg-white !text-black"
             }`}
           >
-            Work
+            {t("nav_work")}
           </button>
           <button
             onClick={() => {
@@ -66,7 +85,7 @@ const Nav = () => {
               router.pathname === "/kontakt" && "bg-white !text-black"
             }`}
           >
-            Kontakt
+            {t("nav_contact")}
           </button>
           <button
             onClick={() => {
@@ -77,8 +96,30 @@ const Nav = () => {
               router.pathname === "/uber-mich" && "bg-white !text-black"
             }`}
           >
-            Über mich
+            {t("nav_about")}
           </button>
+          <div className="flex flex-row items-center justify-center">
+            <p
+              className="cursor-pointer text-3xl"
+              onClick={() => changeLanguage("de-DE")}
+            >
+              🇩🇪
+            </p>
+            <p className="mx-2">|</p>
+            <p
+              className="cursor-pointer text-3xl"
+              onClick={() => changeLanguage("en-EN")}
+            >
+              🇬🇧
+            </p>
+            <p className="mx-2">|</p>
+            <p
+              className="cursor-pointer text-3xl"
+              onClick={() => changeLanguage("hu-HU")}
+            >
+              🇭🇺
+            </p>
+          </div>
         </div>
       </nav>
     </>
