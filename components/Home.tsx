@@ -77,7 +77,7 @@ const HomePage = () => {
         <div className="fixed bottom-11 sm:bottom-10 left-[80px] w-[calc(100vw - 160px)] right-[80px] flex flex-col-reverse sm:flex-row items-center justify-center gap-[24px] sm:justify-between">
           <a
             href="https://howisyourbrand.com"
-            className="text-white text-opacity-50 text-center"
+            className="text-white max-sm:hidden text-opacity-50 text-center"
           >
             Designed by <br className="sm:hidden" /> HowIsYourBrand
           </a>
