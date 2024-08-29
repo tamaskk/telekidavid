@@ -23,8 +23,7 @@ const Cookie = ({
       </button>
       <button
         onClick={() => {
-          localStorage.removeItem("cookieAccepted");
-          router.replace("https://www.google.com");
+          localStorage.setItem("cookieAccepted", "true");
         }}
         className="ml-4 bg-white text-black px-4 py-2 rounded"
       >

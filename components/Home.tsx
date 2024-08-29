@@ -74,12 +74,12 @@ const HomePage = () => {
         >
           <p>{t("main_page_header_work")}</p>
         </button>
-        <div className="fixed bottom-10 left-[80px] w-[calc(100vw - 160px)] right-[80px] flex flex-row items-center justify-between">
+        <div className="fixed bottom-11 sm:bottom-10 left-[80px] w-[calc(100vw - 160px)] right-[80px] flex flex-col-reverse sm:flex-row items-center justify-center gap-[24px] sm:justify-between">
           <a
             href="https://howisyourbrand.com"
-            className="text-white text-opacity-50"
+            className="text-white text-opacity-50 text-center"
           >
-            Designed by HowIsYourBrand
+            Designed by <br className="sm:hidden" /> HowIsYourBrand
           </a>
           <div className="flex flex-row items-center justify-center gap-3 text-white text-opacity-50">
             <a
