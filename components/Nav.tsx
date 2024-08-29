@@ -98,28 +98,6 @@ const Nav = () => {
           >
             {t("nav_about")}
           </button>
-          <div className="flex flex-row items-center justify-center">
-            <p
-              className="cursor-pointer text-3xl"
-              onClick={() => changeLanguage("de-DE")}
-            >
-              🇩🇪
-            </p>
-            <p className="mx-2">|</p>
-            <p
-              className="cursor-pointer text-3xl"
-              onClick={() => changeLanguage("en-EN")}
-            >
-              🇬🇧
-            </p>
-            <p className="mx-2">|</p>
-            <p
-              className="cursor-pointer text-3xl"
-              onClick={() => changeLanguage("hu-HU")}
-            >
-              🇭🇺
-            </p>
-          </div>
         </div>
       </nav>
     </>
