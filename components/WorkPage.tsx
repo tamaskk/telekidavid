@@ -132,7 +132,7 @@ const WorkPage = () => {
   return (
     <div
       style={bgStyleForHome}
-      className={`${Crimson.className} absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
+      className={`${Crimson.className} absolute inset-0 flex flex-col h-screen items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
       {(isAccepted === false || isAccepted === null) && (
         <Cookie setIsAccepted={setIsAccepted} />
