@@ -52,19 +52,27 @@ const UberMinch = () => {
         <h1 className="text-[32px] mt-44 sm:text-[72px] font-bold mb-5 max-sm:-mt-32 text-white">
           {t("about_title")}
         </h1>
-        <p className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white">
-          {t("about_text_1")}
+        <div className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white max-w-[1140px]">
+          Mein Name ist Dávid. Frühe Zeichnungen im Kindergarten führten zu
+          einer über 20-jährigen Pause
           <br />
-          {t("about_text_2")}
+          bis ich schließlich erkannte, dass ich doch ein gewisses Talent
+          besitze.
           <br />
-          {t("about_text_3")}
+          Meine Liebe zu Tätowierungen brachte mich schließlich dazu, meine
+          Fähigkeiten in diesem Bereich auszuprobieren.
           <br />
-          {t("about_text_4")}
+          Für mich ist das Tätowieren ein lebenslanger Lernprozess, der stetige
+          Übung und Hingabe erfordert. Mit viel Einsatz und Leidenschaft habe
+          ich ein Niveau erreicht, auf dem Tätowieren nicht nur meine Arbeit,
+          sondern auch meine größte Leidenschaft ist.
           <br />
-          {t("about_text_5")}
+          Schaut euch gerne meine Arbeiten an und teilt mir eure kreativen Ideen
+          mit. Bei der Planung helfe ich euch natürlich gerne weiter.
           <br />
-          {t("about_text_6")}
-        </p>
+          Ihr findet mich im Opal Tattoo Studio in Steyr. Ihr könnt mich auch
+          über WhatsApp oder Instagram kontaktieren.
+        </div>
         <button
           onClick={() => window.open("https://wa.me/436609676961", "_blank")}
           className="relative overflow-hidden min-h-[44px] hover:bg-white delay-100 max-sm:self-end bg-transparent border-2 border-white text-white text-[32px] font-bold rounded-full px-6 flex items-center gap-4 py-3 max-h-[68px] justify-center group transition-all duration-1000 mt-14 sm:mt-14"
