@@ -52,7 +52,7 @@ const UberMinch = () => {
         <h1 className="text-[32px] mt-44 sm:text-[72px] font-bold mb-5 max-sm:-mt-32 text-white">
           {t("about_title")}
         </h1>
-        <div className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white max-w-[1140px]">
+        <div className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white max-w-[1140px] max-sm:hidden">
           Mein Name ist Dávid. Frühe Zeichnungen im Kindergarten führten zu
           einer über 20-jährigen Pause
           <br />
@@ -72,6 +72,23 @@ const UberMinch = () => {
           <br />
           Ihr findet mich im Opal Tattoo Studio in Steyr. Ihr könnt mich auch
           über WhatsApp oder Instagram kontaktieren.
+        </div>
+        <div className="sm:hidden text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white max-w-[318px] gap-2 flex flex-col">
+          <p>
+          Mein Name ist Dávid. Frühe Zeichnungen im Kindergarten führten zu einer über 20-jährigen Pause bis ich schließlich erkannte, dass ich doch ein gewisses Talent besitze. 
+          </p>
+          <p>
+          Meine Liebe zu Tätowierungen brachte mich schließlich dazu, meine Fähigkeiten in diesem Bereich auszuprobieren.
+          </p>
+          <p>
+          Für mich ist das Tätowieren ein lebenslanger Lernprozess, der stetige Übung und Hingabe erfordert. Mit viel Einsatz und Leidenschaft habe ich ein Niveau erreicht, auf dem Tätowieren nicht nur meine Arbeit, sondern auch meine größte Leidenschaft ist. 
+          </p>
+          <p>
+          Schaut euch gerne meine Arbeiten an und teilt mir eure kreativen Ideen mit. Bei der Planung helfe ich euch natürlich gerne weiter.
+          </p>
+          <p>
+          Ihr findet mich im Opal Tattoo Studio in Steyr. Ihr könnt mich auch über WhatsApp oder Instagram kontaktieren.
+          </p>
         </div>
         <button
           onClick={() => window.open("https://wa.me/436609676961", "_blank")}
