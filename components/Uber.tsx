@@ -48,8 +48,8 @@ const UberMinch = () => {
           content="David Teleki Tattoo, Tattoo, Tätowierung, Tätowierer, Wien, Österreich, Tattoos, Tattoo Studio"
         />
       </Head>
-      <div className="w-screen h-full flex flex-col bg-black overflow-y-auto bg-opacity-60 items-start justify-center max-sm:py-0 sm:justify-center px-10 sm:px-[150px]">
-        <h1 className="text-[32px] mt-44 sm:text-[72px] font-bold mb-5 max-sm:-mt-32 text-white">
+      <div className="w-screen h-full flex flex-col bg-black overflow-y-auto bg-opacity-60 items-start justify-start max-sm:py-0 sm:justify-center px-10 sm:px-[150px]">
+        <h1 className="text-[32px] mt-44 sm:text-[72px] font-bold mb-5 max-sm:mt-[44px] text-white">
           {t("about_title")}
         </h1>
         <div className="text-[18px] max-sm:leading-5 sm:text-[24px] font-normal text-white max-w-[1140px] max-sm:hidden">
