@@ -12,12 +12,6 @@ const Crimson = Crimson_Text({
 });
 
 const UberMinch = () => {
-  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("cookieAccepted");
-    setIsAccepted(accepted === "true"); // Convert to boolean
-  }, []);
   const bgStyleForHome = {
     backgroundImage: `url(${uberhome.src})`,
     backgroundSize: "cover",
@@ -32,9 +26,6 @@ const UberMinch = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
-      {(isAccepted === false || isAccepted === null) && (
-        <Cookie setIsAccepted={setIsAccepted} />
-      )}
       <Head>
         <title>David Teleki Tattoo</title>
         <meta

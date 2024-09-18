@@ -16,7 +16,6 @@ import image6 from "../assets/cc8e8cfb56e26378fe848b9005fc1ecb.jpeg";
 import image7 from "../assets/d366d4799ac37cd64885a16f07d34070.jpeg";
 import image8 from "../assets/e8a272dfd252e840fcf01a6b2592cafc.jpeg";
 import uberhome from "../assets/tattoooldalhatter.webp";
-import Cookie from "./Cookie";
 
 const OverLay = ({
   children,
@@ -60,12 +59,6 @@ const Crimson = Crimson_Text({
 
 const WorkPage = () => {
   const { t } = useTranslation();
-  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("cookieAccepted");
-    setIsAccepted(accepted === "true"); // Convert to boolean
-  }, []);
   const [openImage, setOpenImage] = useState({
     isOpen: false,
     index: 0,
@@ -134,9 +127,6 @@ const WorkPage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} absolute inset-0 flex flex-col h-screen items-center justify-center transition-opacity duration-300 overflow-y-auto`}
     >
-      {(isAccepted === false || isAccepted === null) && (
-        <Cookie setIsAccepted={setIsAccepted} />
-      )}
       <Head>
         <title>David Teleki Tattoo</title>
         <meta

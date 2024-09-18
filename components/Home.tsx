@@ -13,13 +13,6 @@ const Crimson = Crimson_Text({
 });
 
 const HomePage = () => {
-  const [isAccepted, setIsAccepted] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("cookieAccepted");
-    setIsAccepted(accepted === "true"); // Convert to boolean
-  }, []);
-
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -35,9 +28,6 @@ const HomePage = () => {
       style={bgStyleForHome}
       className={`${Crimson.className} h-full flex flex-col items-center justify-center transition-opacity duration-300`}
     >
-      {(isAccepted === false || isAccepted === null) && (
-        <Cookie setIsAccepted={setIsAccepted} />
-      )}
       <Head>
         <title>David Teleki Tattoo</title>
         <meta
